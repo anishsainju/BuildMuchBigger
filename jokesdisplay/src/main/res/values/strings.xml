@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">jokesdisplay</string>
+    <string name="jokeIntentId">jokeIntentId</string>
+    <string name="joke_here">A hilarious joke will appear here shortly</string>
+</resources>
