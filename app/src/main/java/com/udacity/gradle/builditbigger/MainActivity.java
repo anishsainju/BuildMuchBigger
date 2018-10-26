@@ -1,17 +1,13 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.ajimatech.android.jokesdisplay.JokesDisplayActivity;
-import com.ajimatech.android.jokesprovider.Joker;
 
 
 public class MainActivity extends AppCompatActivity implements EndpointsAsyncTask.OnPostExecuteListener{
@@ -53,9 +49,8 @@ public class MainActivity extends AppCompatActivity implements EndpointsAsyncTas
 
     @Override
     public void onPostTaskExecute(String result) {
-        Joker myJoker = new Joker();
         Intent intent = new Intent(this, JokesDisplayActivity.class);
-        intent.putExtra(getString(R.string.jokeIntentId), myJoker.getJoke());
+        intent.putExtra(getString(R.string.jokeIntentId), result);
         startActivity(intent);
     }
 }

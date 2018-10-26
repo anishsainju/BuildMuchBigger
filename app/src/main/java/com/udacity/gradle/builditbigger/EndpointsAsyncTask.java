@@ -1,11 +1,8 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v4.util.Pair;
 
-import com.ajimatech.android.jokesdisplay.JokesDisplayActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -30,7 +27,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
                     .setRootUrl("http://10.0.2.2:8080/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
-                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
+                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) {
                             abstractGoogleClientRequest.setDisableGZipContent(true);
                         }
                     });
@@ -40,12 +37,12 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
         }
 
         context = params[0];
-        mOnPostExecuteListener = (OnPostExecuteListener) context;;
+        mOnPostExecuteListener = (OnPostExecuteListener) context;
 
         try {
             return myApiService.getJoke().execute().getData();//.sayHi(name).execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            return "";
         }
     }
 

@@ -137,6 +137,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/checkFreeDebugClasspath" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/checkFreeReleaseClasspath" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/checkPaidDebugClasspath" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/checkPaidReleaseClasspath" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compatible_screen_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_merged_manifests" />
@@ -227,7 +228,8 @@
     <orderEntry type="library" name="Gradle: com.google.guava:guava-jdk5:17.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-28.0.0" level="project" />
     <orderEntry type="module" module-name="jokesdisplay" />
-    <orderEntry type="module" module-name="jokesprovider" />
     <orderEntry type="library" name="Gradle: android-android-28" level="project" />
+    <orderEntry type="module" module-name="jokesdisplay" />
+    <orderEntry type="module" module-name="jokesdisplay" />
   </component>
 </module>
